@@ -1,0 +1,124 @@
+.controls {
+  position: absolute;
+  right: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  width: 157px;
+  background-color: var(--primaryWhite);
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
+}
+.controls > div:first-child{
+  margin-top: 11px;
+}
+
+.controls > div:not(:last-child) {
+  display: flex;
+  text-align: center;
+  vertical-align: middle;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 20px;
+  color: var(--controlsGrey);
+}
+.controls > div:not(:last-child){
+  margin-right: 17px;
+  border-bottom: 1px solid var(--lineGrey);
+  padding-bottom: 12px;
+}
+
+
+.iconComplain{
+  border-bottom: none !important;
+  padding-bottom: 0px !important;
+}
+.controls > div:hover {
+  cursor: pointer;
+}
+
+.dropdown_close {
+  background-color: var(--backgroundGrey);
+  padding-top: 10px;
+  padding-bottom: 15px;
+  text-align: center;
+  color: var(--fontClose);
+}
+
+.actions {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.actions > * + * {
+  margin: 0 0 0 13px;
+}
+.divider {
+  height: 1px;
+  width: 100%;
+  background-color: var(--lineGrey);
+}
+@media all and (min-width: 1024px) {
+  .controls {
+    order: 3;
+    flex: 0 0;
+    margin: 0 0 0 24px;
+    right: -39px;
+    top: 37px;
+  }
+
+  .actions {
+    display: none;
+  }
+}
+
+.karmaCounter > * + * {
+  padding: 0 0 0 4px;
+}
+
+.karmaValue {
+  color: var(--controlsGrey);
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.down {
+  transform: rotate(180deg);
+}
+
+@media all and (min-width: 1024px) {
+  .karmaCounter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+  }
+  .karmaCounter > * + * {
+    padding: 7px 0 0;
+  }
+
+  .karmaValue {
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--primaryBlack);
+  }
+}
+
+@media all and (min-width: 1540px) {
+  .karmaCounter > button.up:hover > svg > path {
+    fill: var(--primaryGreen);
+  }
+
+  .karmaCounter > button.down:hover > svg > path {
+    fill: var(--primaryOrange);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .iconComment,
+  .iconSave,
+  .itemShare {
+    display: none !important;
+  }
+}
